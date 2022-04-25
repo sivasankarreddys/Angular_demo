@@ -1,0 +1,47 @@
+<h3> User Registration Form</h3>
+<form (ngSubmit)="saveUser()" #userForm="ngForm">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="login.username" 
+          class="form-control" 
+          id="username" 
+          name="username" 
+          placeholder="Enter your name"
+          required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="emailId">EmailId:</label>
+        <input type="text" [(ngModel)]="login.emailId" 
+          class="form-control" 
+          id="emailId" 
+          name="emailId" 
+          placeholder="Enter emailId"
+          required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="mobileNo">Mobile No :+91-</label>
+        <input type="text" [(ngModel)]="login.mobileNo" 
+          class="form-control" 
+          id="mobileNo" 
+          name="mobileNo" 
+          placeholder="Enter mobileNo"
+          required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" [(ngModel)]="login.password" 
+          class="form-control" 
+          id="password" 
+          name="mobileNo" 
+          placeholder="Enter *******"
+          required #name="ngModel">
+      </div>
+      
+      <button type="submit" 
+        class="btn btn-info">Submit</button>
+    </form>
+
+
+
+
