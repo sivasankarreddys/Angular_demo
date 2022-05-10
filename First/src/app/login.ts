@@ -1,8 +1,10 @@
 export class Login {
    
-    username:string | undefined
-    emailId:string | undefined
-    mobileNo : Number | undefined
-    password : string | undefined
+    username ?:string 
+    emailId?: string
+    mobileNo ?: Number 
+    password ?: string 
+    userid ?: number;
+		
    
 }

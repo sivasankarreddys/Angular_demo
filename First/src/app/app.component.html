@@ -40,8 +40,45 @@
       
       <button type="submit" 
         class="btn btn-info">Submit</button>
-    </form>
+      </form>
 
-
+   
+      <button type="submit" (click)="getAccount()">Accounts</button>
+  
+     
+    <table class='table' border="1">
+      <thead>
+        <tr>
+          <th>Account Id</th>
+          <th>Account FirstName</th>
+          <th>Account LastName</th>
+          <th>Account Created Date</th>
+          <th>Account IdentificationNumber</th>
+          <th>Account IdentificationType</th>
+          <th>Account Phone Number</th>
+          <th>Account Number</th>
+          <th>Account Type</th>
+          <th>Account Balance</th>
+        </tr>
+      </thead> 
+     
+      <tbody>
+        <tr *ngFor ="let account of Account">
+            <td>{{account.account_id}}</td>
+            <td>{{account.firstName}}</td>
+            <td>{{account.lastName}}</td>
+            <td>{{account.acc_createdDate}}</td>
+            <td>{{account.identificationNum}}</td>
+            <td>{{account.identificationType}}</td>
+            <td>{{account.phoneno}}</td>
+            <td>{{account.accountNum}}</td>
+            <td>{{account.accounttype}}</td>
+            <td>{{account.balance}}</td>  
+      </tr>
+      </tbody> 
+    </table>
+     
+  
+    
 
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Account } from './account';
 import { Login } from './login';
 import { LoginServiceService } from './login-service.service';
 
@@ -10,14 +11,21 @@ import { LoginServiceService } from './login-service.service';
 export class AppComponent {
   title = 'First';
   login: Login;
-
+  Account : Account[] | undefined;
+  result : any;
   constructor(
     
-        private loginService: LoginServiceService) {
+  private loginService: LoginServiceService) {
     this.login = new Login();
+    //this.Account = new Account();
   }
 
   saveUser() {
-    this.loginService.save(this.login).subscribe(result => "successfully Saved Records");
+  this.result=  this.loginService.save(this.login).subscribe(result => "successfully Saved Records");
+  }
+
+  getAccount(){
+   let accdetails =  this.loginService.getAccount();
+   accdetails.subscribe((data)=>this.Account=data);
   }
 }
