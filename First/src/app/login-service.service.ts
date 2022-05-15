@@ -26,6 +26,10 @@ export class LoginServiceService {
     //getRepos(userName: string): Observable<any> {
       return this.http.get<Account[]>(this.registorUrl+'accounts')
     }
+
+    public loginvalidate(login: Login ) {
+      return this.http.post<Login>(this.registorUrl+'login', login);
+    }
   
   
 }

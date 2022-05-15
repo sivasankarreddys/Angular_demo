@@ -1,0 +1,36 @@
+<form (ngSubmit)="loginvalidate(login)" #userForm="ngForm">
+    <table>
+        <tr>
+      <th>Username:</th>
+     
+        <td><input type="text" [(ngModel)]="login.username" 
+          class="form-control" 
+          id="username" 
+          name="username" 
+          placeholder="Enter your name"
+          required #name="ngModel"></td> 
+          {{message}}
+       </tr><tr>  
+      <th>Password:</th>
+   
+          <td><input type="password" [(ngModel)]="login.password" 
+            class="form-control" 
+            id="password" 
+            name="password" 
+            placeholder="Enter your password"
+            required #name="ngModel"></td>
+            {{message}}
+     </tr>
+     
+       
+     
+    </table>
+ 
+    <button type="submit" 
+            class="btn btn-info">Login</button>
+</form>   
+
+
+
+
+  
