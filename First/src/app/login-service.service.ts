@@ -14,12 +14,13 @@ export class LoginServiceService {
   private registorUrl: string;
 
   constructor(private http: HttpClient) {
-    this.registorUrl = 'http://localhost:8081/api/';
+    this.registorUrl = 'http://localhost:8081/api';
   }
 
   
   public save(login: Login ) {
-    return this.http.post<Login>(this.registorUrl+'registration', login);
+    return this.http.post<Login>(this.registorUrl+'/registration', login);
+    
   }
 
   public getAccount():Observable<Account[]>{
@@ -28,7 +29,9 @@ export class LoginServiceService {
     }
 
     public loginvalidate(login: Login ) {
-      return this.http.post<Login>(this.registorUrl+'login', login);
+      return this.http.post<Login>(this.registorUrl+'/login', login);
+      
+      
     }
   
   

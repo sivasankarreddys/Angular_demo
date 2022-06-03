@@ -5,6 +5,7 @@
      
         <td><input type="text" [(ngModel)]="login.username" 
           class="form-control" 
+          required mi="4"
           id="username" 
           name="username" 
           placeholder="Enter your name"
@@ -20,15 +21,20 @@
             placeholder="Enter your password"
             required #name="ngModel"></td>
             {{message}}
-     </tr>
-     
+     </tr>  
        
      
     </table>
  
     <button type="submit" 
-            class="btn btn-info">Login</button>
-</form>   
+            class="btn btn-info">Login</button>            
+</form>  
+
+
+
+  
+ 
+  
 
 
 

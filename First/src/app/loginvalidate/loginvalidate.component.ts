@@ -9,7 +9,7 @@ import { LoginServiceService } from '../login-service.service';
 })
 export class LoginvalidateComponent implements OnInit {
   login: Login;
-  message : String | undefined;
+  message : String | undefined; 
 
   constructor(private loginService : LoginServiceService) { 
     this.login = new Login();
@@ -25,9 +25,10 @@ export class LoginvalidateComponent implements OnInit {
      }
      if (login.password==null){
          this.message="please enter password"
-       }
-     
-     // this.loginService.loginvalidate(this.login).subscribe(result => "successfully validated user");
+       }     
+     else{
+      this.loginService.loginvalidate(this.login).subscribe(message => "successfully validated user");
+     }
     
 }
 

@@ -1,0 +1,8 @@
+runtime: angular1
+handlers:
+ -url: /
+  static_files: dist/Angular_demo/First/index.html
+  upload: dist/Angular_demo/First/index.html
+
+ -url: /
+  static_dir: dist/Angular_demo/First
